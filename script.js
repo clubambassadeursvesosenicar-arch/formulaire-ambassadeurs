@@ -237,7 +237,7 @@ function submitForm() {
     informations_complementaires: document.getElementById('ajout').value.trim(),
     engagement_confirmed: true
   };
-  alert("Date envoyée : " + data.date_naissance);
+ 
 console.log(data);
 
   // 🌐 URL de l'Apps Script
