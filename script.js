@@ -240,6 +240,8 @@ function submitForm() {
   // 🌐 URL de l'Apps Script
   const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzE7ZRqDn5Cd-KF1Ddq_05Wg2qi5jXwkPwYLDI6ZUkpE_gqV_RDhN-V1Dmwkcr4iAoPVg/exec';
 
+  //test
+  console.log("DATE NAISSANCE =", document.getElementById('date_naissance').value);
   // 📤 Envoyer les données
   fetch(appsScriptUrl, {
     method: 'POST',
