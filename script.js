@@ -247,16 +247,40 @@ function submitForm() {
   .then(response => response.json())
   .then(result => {
     if (result.success) {
-      alert('✅ Votre candidature a été enregistrée avec succès !\nMerci pour votre engagement envers le Club SOS Villages d\'Enfants.');
+      // ✅ Marquer comme soumis dans localStorage
+      localStorage.setItem('formulaire_soumis', 'true');
       
-      // Réinitialiser le formulaire
-      document.getElementById('formulaire').reset();
-      
-      // Retour à l'étape 1
-      currentStep = 0;
-      rating_leadership = '';
-      rating_comm = '';
-      updateFormDisplay();
+      // Afficher le message final et bloquer
+      document.body.innerHTML = `
+        <div style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        ">
+          <div style="
+            background: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+          ">
+            <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
+            <h2 style="margin: 0 0 10px 0; color: #333;">Candidature enregistrée !</h2>
+            <p style="color: #666; font-size: 16px; margin: 0 0 20px 0;">
+              Merci pour votre engagement envers le Club Ambassadeurs SOS Villages d'Enfants.
+            </p>
+            <p style="color: #999; font-size: 14px; margin: 0;">
+              Votre candidature a été enregistrée avec succès.<br>
+              ⚠️ Vous ne pouvez pas remplir ce formulaire à nouveau.
+            </p>
+          </div>
+        </div>
+      `;
+    }
     } else {
       alert('❌ Erreur lors de l\'enregistrement. Veuillez réessayer.');
     }
