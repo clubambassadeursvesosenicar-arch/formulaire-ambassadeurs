@@ -237,6 +237,8 @@ function submitForm() {
     informations_complementaires: document.getElementById('ajout').value.trim(),
     engagement_confirmed: true
   };
+  alert("Date envoyée : " + data.date_naissance);
+console.log(data);
 
   // 🌐 URL de l'Apps Script
   const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzE7ZRqDn5Cd-KF1Ddq_05Wg2qi5jXwkPwYLDI6ZUkpE_gqV_RDhN-V1Dmwkcr4iAoPVg/exec';
