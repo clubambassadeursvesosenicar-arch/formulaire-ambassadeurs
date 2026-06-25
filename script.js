@@ -241,7 +241,7 @@ function submitForm() {
 console.log(data);
 
   // 🌐 URL de l'Apps Script
-  const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzE7ZRqDn5Cd-KF1Ddq_05Wg2qi5jXwkPwYLDI6ZUkpE_gqV_RDhN-V1Dmwkcr4iAoPVg/exec';
+  const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbwmxo1UAedBT5aswzLdapVFITjpEZZEddoAGo9AjAGs/dev';
 
  
   // 📤 Envoyer les données
