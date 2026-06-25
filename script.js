@@ -280,7 +280,6 @@ function submitForm() {
           </div>
         </div>
       `;
-    }
     } else {
       alert('❌ Erreur lors de l\'enregistrement. Veuillez réessayer.');
     }
