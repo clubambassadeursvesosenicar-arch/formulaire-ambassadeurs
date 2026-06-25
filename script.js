@@ -266,10 +266,25 @@ function submitForm() {
     alert('❌ Une erreur s\'est produite lors de l\'envoi.\nVérifiez votre connexion et réessayez.');
   });
 }
+// ========================================
+// VÉRIFIER SI DÉJÀ SOUMIS
+// ========================================
+function checkIfAlreadySubmitted() {
+  const alreadySubmitted = localStorage.getItem('formulaire_soumis');
+  
+  if (alreadySubmitted) {
+    alert('⚠️ Vous avez déjà soumis ce formulaire.\nVous n\'avez pas le droit de le remplir à nouveau.');
+    // Bloquer l'accès
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;"><h2>Accès refusé</h2><p>Vous avez déjà soumis votre candidature.</p></div>';
+    return false;
+  }
+  return true;
+}
 
 // ========================================
 // INITIALISATION AU CHARGEMENT
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
+  checkIfAlreadySubmitted();  // Vérif au chargement
   updateFormDisplay();
 });
