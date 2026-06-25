@@ -217,7 +217,7 @@ function submitForm() {
     timestamp: new Date().toLocaleString('fr-FR'),
     nom: document.getElementById('nom').value.trim(),
     prenom: document.getElementById('prenom').value.trim(),
-    date_naissance: document.getElementById('date_naissance').value.trim(),
+    date_naissance: document.getElementById('date_naissance').value || "",
     email: document.getElementById('email').value.trim(),
     telephone: document.getElementById('tel').value.trim(),
     niveau: document.getElementById('niveau').value,
