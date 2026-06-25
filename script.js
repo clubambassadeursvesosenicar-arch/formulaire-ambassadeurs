@@ -167,6 +167,7 @@ function displayRecap() {
   
   const nom = document.getElementById('nom').value.trim();
   const prenom = document.getElementById('prenom').value.trim();
+  const date_naissance: document.getElementById('date_naissance').value || "",
   const email = document.getElementById('email').value.trim();
   const tel = document.getElementById('tel').value.trim();
   const niveau = document.getElementById('niveau').value;
