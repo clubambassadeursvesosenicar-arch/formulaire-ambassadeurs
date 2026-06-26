@@ -297,7 +297,7 @@ console.log(data);
 // ========================================
 // VÉRIFIER SI DÉJÀ SOUMIS
 // ========================================
-/*function checkIfAlreadySubmitted() {
+function checkIfAlreadySubmitted() {
   const alreadySubmitted = localStorage.getItem('formulaire_soumis');
   
   if (alreadySubmitted) {
@@ -307,7 +307,7 @@ console.log(data);
     return false;
   }
   return true;
-}*/
+}
 
 // ========================================
 // INITIALISATION AU CHARGEMENT
